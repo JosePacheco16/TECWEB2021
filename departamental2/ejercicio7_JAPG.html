@@ -189,12 +189,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_longitud_1" value="0">
+                                    <input type="number" class="form-control" id="input_longitud_1" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_longitud_2" value="0">
+                                    <input type="number" class="form-control" id="input_longitud_2" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                     </div>
@@ -202,21 +202,35 @@
                         <div class="row">
                         <div class="col-md-6">
                                 <div class="form-group">
-                                    <select class="form-control" id="select_longitud_1">
-                                      <option value="1">Milímetro</option>
-                                      <option value="2">Centímetro</option>
-                                      <option value="3">Metro</option>
-                                      <option value="4">Kilómetro</option>
+                                    <select class="form-control" id="select_longitud_1" onchange="cambiaContenido();">
+                                      <option value="kilometro">Kilómetro</option>
+                                      <option value="metro">Metro</option>
+                                      <option value="centimetro">Centímetro</option>
+                                      <option value="milimetro">Milímetro</option>
+                                      <option value="micrometro">Micrómetro</option>
+                                      <option value="nanometro">Nanómetro</option>
+                                      <option value="milla">Milla</option>
+                                      <option value="yarda">Yarda</option>
+                                      <option value="pie">Pie</option>
+                                      <option value="pulgada">Pulgada</option>
+                                      <option value="milla nautica">Milla Náutica</option>
                                     </select>
                                   </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <select class="form-control" id="select_longitud_2">
-                                    <option value="1">Milímetro</option>
-                                    <option value="2">Centímetro</option>
-                                    <option value="3">Metro</option>
-                                    <option value="4">Kilómetro</option>
+                                <select class="form-control" id="select_longitud_2" onchange="cambiaContenido();">
+                                  <option value="kilometro">Kilómetro</option>
+                                  <option value="metro">Metro</option>
+                                  <option value="centimetro">Centímetro</option>
+                                  <option value="milimetro">Milímetro</option>
+                                  <option value="micrometro">Micrómetro</option>
+                                  <option value="nanometro">Nanómetro</option>
+                                  <option value="milla">Milla</option>
+                                  <option value="yarda">Yarda</option>
+                                  <option value="pie">Pie</option>
+                                  <option value="pulgada">Pulgada</option>
+                                  <option value="milla nautica">Milla Náutica</option>
                                 </select>
                               </div>
                        </div>
@@ -224,7 +238,7 @@
 
                         <div class="alert alert-success alert-dismissible">
                         <h5><i class="icon fas fa-check"></i>Formula</h5>
-                        Multiplica el valor de longitud por 100
+                        <span id="muestra_formula">Fórmula para la conversión</span>
                     </div>
 
                     </div>
@@ -233,12 +247,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_temperatura_1" value="0">
+                                    <input type="number" class="form-control" id="input_temperatura_1" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_temperatura_2" value="0">
+                                    <input type="number" class="form-control" id="input_temperatura_2" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                     </div>
@@ -246,19 +260,19 @@
                         <div class="row">
                         <div class="col-md-6">
                                 <div class="form-group">
-                                    <select class="form-control"id="select_temperatura_1">
-                                        <option value="1">Celcius</option>
-                                        <option value="2">Fahrenheit</option>
-                                        <option value="3">Kelvin</option>
+                                    <select class="form-control"id="select_temperatura_1" onchange="cambiaContenido();">
+                                        <option value="celcius">Celcius</option>
+                                        <option value="fahrenheit">Fahrenheit</option>
+                                        <option value="kelvin">Kelvin</option>
                                     </select>
                                   </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <select class="form-control" id="select_temperatura_2">
-                                    <option value="1">Celcius</option>
-                                    <option value="2">Fahrenheit</option>
-                                    <option value="3">Kelvin</option>
+                                <select class="form-control" id="select_temperatura_2" onchange="cambiaContenido();">
+                                    <option value="celcius">Celcius</option>
+                                    <option value="fahrenheit">Fahrenheit</option>
+                                    <option value="kelvin">Kelvin</option>
                                 </select>
                               </div>
                        </div>
@@ -266,7 +280,7 @@
 
                         <div class="alert alert-success alert-dismissible">
                         <h5><i class="icon fas fa-check"></i>Formula</h5>
-                        Multiplica el valor de longitud por 100
+                        <span id="formu">Fórmula para la conversión</span>
                     </div>
 
                     </div>
@@ -276,12 +290,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_masa_1" value="0">
+                                    <input type="number" class="form-control" id="input_masa_1" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="input_masa_2" value="0">
+                                    <input type="number" class="form-control" id="input_masa_2" value="0" onchange="cambiaContenido();" onkeypress="cambiaContenido();">
                                   </div>
                             </div>
                     </div>
@@ -289,19 +303,19 @@
                         <div class="row">
                         <div class="col-md-6">
                                 <div class="form-group">
-                                    <select class="form-control" id="select_masa_1">
-                                        <option value="1">Miligramo</option>
-                                        <option value="2">Gramo</option>
-                                        <option value="3">Kilogramo</option>
+                                    <select class="form-control" id="select_masa_1" onchange="cambiaContenido();">
+                                        <option value="miligramo">Miligramo</option>
+                                        <option value="gramo">Gramo</option>
+                                        <option value="kilogramo">Kilogramo</option>
                                     </select>
                                   </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <select class="form-control" id="select_masa_2">
-                                    <option value="1">Miligramo</option>
-                                    <option value="2">Gramo</option>
-                                    <option value="3">Kilogramo</option>
+                                <select class="form-control" id="select_masa_2" onchange="cambiaContenido();">
+                                    <option value="miligramo">Miligramo</option>
+                                    <option value="gramo">Gramo</option>
+                                    <option value="kilogramo">Kilogramo</option>
                                 </select>
                               </div>
                        </div>
@@ -309,7 +323,7 @@
     
                         <div class="alert alert-success alert-dismissible">
                         <h5><i class="icon fas fa-check"></i>Formula</h5>
-                        Multiplica el valor de longitud por 100
+                        <span id="muestra_formula">Fórmula para la conversión</span>
                     </div> 
                         </div>
                     </div>
@@ -362,7 +376,7 @@
 <!-- Page specific script -->
 
 <!--Escripts Propios-->
-<script src="js/calculadoraCientifica.js"
+<script src="js/conversor-unidades.js"
 
 <script>
   $(function () {
